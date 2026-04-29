@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="School website, Education, Students" />
+    <meta
+      name="description"
+      content="School website for Bright Future Academy"
+    />
+    <title>Bright Future Academy</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar other-pages">
+      <div class="nav-container">
+        <!-- Nav Left -->
+        <div class="nav-left">
+          <a href="index.html" class="nav-logo-link">
+            <img src="images/logo.png" alt="School Logo" />
+            <div class="nav-title">
+              <p><span>Bright Future Academy</span></p>
+              <p>Excellence in Education</p>
+            </div>
+          </a>
+        </div>
+        <!-- Nav Center/Links -->
+        <div class="nav-center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="fees.html">Fees</a>
+          <a href="news-events.html">News & Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <!-- Nav Button -->
+        <div class="nav-right">
+          <a href="portal.html" class="nav-btn btn colored-btn"
+            ><i class="ri-user-line"></i>Student Portal</a
+          >
+        </div>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="fees.html">Fees</a></li>
+        <li><a href="news-events.html">News & Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="portal.html" class="nav-btn btn colored-btn"
+            ><i class="ri-user-line"></i>Student Portal</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>
+        We're here to answer your questions and help you learn more about Bright
+        Future Academy
+      </p>
+
+      <div class="contact-pad">
+        <div class="map-container reveal reveal-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15858.871801587049!2d5.6134338!3d6.43026805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1771234975415!5m2!1sen!2sng"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="form-wrapper reveal reveal-right">
+          <h3>Send Us a Message</h3>
+          <form>
+            <div class="form-group">
+              <label for="fullName">Full Name <em>*</em></label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                placeholder="Your full name"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <em>*</em></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="youremail@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber"> Phone Number <em>*</em></label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  required
+                  placeholder="+234 801 234 5678"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject"> Subject <em>*</em></label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="admissions-inquiry">Admissions Inquiry</option>
+                <option value="school-fees">School Fees</option>
+                <option value="academic-programs">Academic Programs</option>
+                <option value="general-inquiry">General Inquiry</option>
+                <option value="complaint">Complaint</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message"> Message <em>*</em></label>
+              <textarea
+                id="message"
+                name="message"
+                minlength="5"
+                maxlength="500"
+                placeholder="Tell us how we can help you..."
+                required
+              ></textarea>
+              <p class="max-character">Maximum 500 characters</p>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <!-- Row start -->
+      <div class="contact-row">
+        <div class="contact-box reveal reveal-up">
+          <i class="ri-map-pin-line"></i>
+          <h4>Visit Us</h4>
+          <p>123 Education Avenue</p>
+          <p>Victoria Island</p>
+          <p>Lagos, nigeria</p>
+        </div>
+        <div class="contact-box reveal reveal-up">
+          <i class="ri-phone-line"></i>
+          <h4>Call Us</h4>
+          <p><strong>Main Office:</strong></p>
+          <p>+234 706 123 4590</p>
+          <p><strong>Admissions:</strong></p>
+          <p>+234 706 123 4591</p>
+        </div>
+        <div class="contact-box reveal reveal-up">
+          <i class="ri-time-line"></i>
+          <h4>Office Hours</h4>
+          <p><strong>Monday - Friday:</strong></p>
+          <p>7:30AM - 4:00PM</p>
+          <p><strong>Saturday:</strong></p>
+          <p>9:00AM - 1:00PM</p>
+        </div>
+      </div>
+      <!-- Row end -->
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <!-- Footer top1 start -->
+        <div class="footer-top1">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Footer Logo" />
+            <h3>Bright Future Academy</h3>
+          </div>
+          <p>
+            Shaping minds, building futures since 2010. Excellence in education
+            for primary and secondary students.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+        <!-- Footer top1 end -->
+        <!--Footer top2 start  -->
+        <div class="footer-top2">
+          <p><span>Quick Links</span></p>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="fees.html">School Fees</a>
+        </div>
+        <!-- Footer top2 end -->
+        <!-- Footer top3 start -->
+        <div class="footer-top3">
+          <p><span>Resources</span></p>
+          <a href="portal.html">Student Portal</a>
+          <a href="news-events.html">News & Events</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Download Prospectus</a>
+          <a href="news-events.html">Academic Calendar</a>
+        </div>
+        <!-- Footer top3 end -->
+        <!-- Footer top4 start -->
+        <div class="footer-top4">
+          <p><span>Contact Info</span></p>
+          <p class="footer-contact">
+            <i class="ri-map-pin-line"></i>
+            123 Education Avenue, Victoria Island, Lagos, Nigeria
+          </p>
+          <p class="footer-contact">
+            <i class="ri-phone-line"></i>+234 801 234 5678
+          </p>
+          <p class="footer-contact">
+            <i class="ri-mail-line"></i>info@brightfutureacademy.edu.ng
+          </p>
+          <p class="footer-contact">
+            <i class="ri-time-line"></i> Mon-Fri: 7:30AM - 4:00PM<br />Sat:
+            9:00AM - 1:00PM
+          </p>
+        </div>
+        <!-- Footer top4 end -->
+      </div>
+      <!-- Footer top end -->
+      <div class="footer-bottom">
+        <img src="images/campus1.jpg" alt="Campus" />
+        <div class="newsletter-head">
+          <h4>Join Our Community of Excellence</h4>
+          <p>Subscribe to our newsletter for updates and announcements</p>
+        </div>
+        <form id="newsLetterForm" class="news-letter-form">
+          <div class="form-group">
+            <input
+              type="email"
+              id="subscriberEmail"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+            <button type="submit" id="newsSubmitBtn " class="colored-btn">
+              Subscribe <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Bright Future Academy</p>
+      </div>
+    </footer>
+    <button id="scrollTopBtn" class="action-btn">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>

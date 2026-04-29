@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="School website, Education, Students" />
+    <meta
+      name="description"
+      content="School website for Bright Future Academy"
+    />
+    <title>Bright Future Academy</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar other-pages">
+      <div class="nav-container">
+        <!-- Nav Left -->
+        <div class="nav-left">
+          <a href="index.html" class="nav-logo-link">
+            <img src="images/logo.png" alt="School Logo" />
+            <div class="nav-title">
+              <p><span>Bright Future Academy</span></p>
+              <p>Excellence in Education</p>
+            </div>
+          </a>
+        </div>
+        <!-- Nav Center/Links -->
+        <div class="nav-center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="fees.html">Fees</a>
+          <a href="news-events.html">News & Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <!-- Nav Button -->
+        <div class="nav-right">
+          <a href="portal.html" class="nav-btn btn colored-btn"
+            ><i class="ri-user-line"></i>Student Portal</a
+          >
+        </div>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="fees.html">Fees</a></li>
+        <li><a href="news-events.html">News & Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="portal.html" class="nav-btn btn colored-btn"
+            ><i class="ri-user-line"></i>Student Portal</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="admissions">
+      <div class="admission-header">
+        <span>Application Deadline: May 31, 2026</span>
+        <h2>Admissions 2026/2027</h2>
+        <p>
+          Welcome to Bright Future Academy! We are excited to have you
+          interested in our school. Please find the information below to help
+          you with the admissions process.
+        </p>
+      </div>
+      <div class="process-row grid">
+        <div class="process-box card">
+          <span>1</span>
+          <i class="ri-file-text-line"></i>
+          <h3>Submit Application</h3>
+          <p>
+            Complete the online application form and submit the required
+            documents.
+          </p>
+        </div>
+        <div class="process-box card">
+          <span>2</span>
+          <i class="ri-file-edit-line"></i>
+          <h3>Entrance Examination</h3>
+          <p>Take our age-appropriate assessment text</p>
+        </div>
+        <div class="process-box card">
+          <span>3</span>
+          <i class="ri-user-voice-line"></i>
+          <h3>Interview & Admission</h3>
+          <p>Attend interview and receive admission decision.</p>
+        </div>
+      </div>
+
+      <div class="form-wrapper">
+        <h3>Online Enrollment Form</h3>
+        <form>
+          <h4>Student Information</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName"> Student Full Name <em>*</em></label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                placeholder="Enter student's full name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="dob"> Date of Birth <em>*</em></label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gender"> Gender <em>*</em></label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="class"> Class Applying For <em>*</em></label>
+              <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option value="primary1">Primary 1</option>
+                <option value="primary2">Primary 2</option>
+                <option value="primary3">Primary 3</option>
+                <option value="primary4">Primary 4</option>
+                <option value="primary5">Primary 5</option>
+                <option value="primary6">Primary 6</option>
+                <option value="secondary1">JSS 1</option>
+                <option value="secondary2">JSS 2</option>
+                <option value="secondary3">JSS 3</option>
+                <option value="secondary4">SS 1</option>
+                <option value="secondary5">SS 2</option>
+                <option value="secondary6">SS 3</option>
+              </select>
+            </div>
+          </div>
+          <h4>Parent/Guardian Information</h4>
+          <div class="form-group">
+            <label for="parentName">
+              Parent/Guardian Full Name <em>*</em></label
+            >
+            <input
+              type="text"
+              id="parentName"
+              name="parentName"
+              required
+              placeholder="Enter parent/guardian name"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email"> Parent/Guardian Email <em>*</em></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="youremail@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber"> Phone Number <em>*</em></label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                required
+                placeholder="+234 801 234 5678"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address"> Home Address <em>*</em></label>
+            <textarea
+              id="address"
+              name="address"
+              required
+              minlength="5"
+              maxlength="500"
+              placeholder="Enter complete home address"
+            ></textarea>
+            <p class="max-character">Maximum 500 characters</p>
+          </div>
+          <div class="form-group">
+            <label for="previousSchool">
+              Previous School Attended (if applicable)</label
+            >
+            <textarea
+              id="previousSchool"
+              name="previousSchool"
+              minlength="5"
+              maxlength="500"
+              placeholder="Enter previous school attended"
+            ></textarea>
+            <p class="max-character">Maximum 500 characters</p>
+          </div>
+          <div class="form-group">
+            <label for="medicalCondition">
+              Medical Conditions of Allergies</label
+            >
+            <textarea
+              id="medicalCondition"
+              name="medicalCondition"
+              minlength="5"
+              maxlength="500"
+              placeholder="Please list any medical condition or allergies we should be aware of"
+            ></textarea>
+            <p class="max-character">Maximum 500 characters</p>
+          </div>
+          <div class="form-group">
+            <label for="documents"> Upload Required Documents <em>*</em></label>
+            <input
+              type="file"
+              id="documents"
+              name="documents"
+              required
+              accept=".pdf,.jpg,.jpeg,.png"
+              multiple
+            />
+            <p class="file-requirements">
+              Accepted formats: PDF, JPG, PNG. Max file size: 5MB each.
+            </p>
+          </div>
+          <button type="submit" class="submit-btn colored-btn">
+            Submit Application
+          </button>
+        </form>
+      </div>
+
+      <div class="documents">
+        <h3>Required Documents</h3>
+        <div class="document-row">
+          <div class="document-box">
+            <i class="ri-file-paper-line"></i>
+            <h4>Birth Certificate</h4>
+            <p>Original and photocopy</p>
+          </div>
+          <div class="document-box">
+            <i class="ri-image-line"></i>
+            <h4>Passport Photographs</h4>
+            <p>4 recent passport photographs</p>
+          </div>
+          <div class="document-box">
+            <i class="ri-file-list-line"></i>
+            <h4>School Records</h4>
+            <p>Previous school reports and transcripts</p>
+          </div>
+          <div class="document-box">
+            <i class="ri-dossier-line"></i>
+            <h4>Medical Report</h4>
+            <p>Recent medical examination</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <!-- Footer top1 start -->
+        <div class="footer-top1">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Footer Logo" />
+            <h3>Bright Future Academy</h3>
+          </div>
+          <p>
+            Shaping minds, building futures since 2010. Excellence in education
+            for primary and secondary students.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+        <!-- Footer top1 end -->
+        <!--Footer top2 start  -->
+        <div class="footer-top2">
+          <p><span>Quick Links</span></p>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="fees.html">School Fees</a>
+        </div>
+        <!-- Footer top2 end -->
+        <!-- Footer top3 start -->
+        <div class="footer-top3">
+          <p><span>Resources</span></p>
+          <a href="portal.html">Student Portal</a>
+          <a href="news-events.html">News & Events</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Download Prospectus</a>
+          <a href="news-events.html">Academic Calendar</a>
+        </div>
+        <!-- Footer top3 end -->
+        <!-- Footer top4 start -->
+        <div class="footer-top4">
+          <p><span>Contact Info</span></p>
+          <p class="footer-contact">
+            <i class="ri-map-pin-line"></i>
+            123 Education Avenue, Victoria Island, Lagos, Nigeria
+          </p>
+          <p class="footer-contact">
+            <i class="ri-phone-line"></i>+234 801 234 5678
+          </p>
+          <p class="footer-contact">
+            <i class="ri-mail-line"></i>info@brightfutureacademy.edu.ng
+          </p>
+          <p class="footer-contact">
+            <i class="ri-time-line"></i> Mon-Fri: 7:30AM - 4:00PM<br />Sat:
+            9:00AM - 1:00PM
+          </p>
+        </div>
+        <!-- Footer top4 end -->
+      </div>
+      <!-- Footer top end -->
+      <div class="footer-bottom">
+        <img src="images/campus1.jpg" alt="Campus" />
+        <div class="newsletter-head">
+          <h4>Join Our Community of Excellence</h4>
+          <p>Subscribe to our newsletter for updates and announcements</p>
+        </div>
+        <form id="newsLetterForm" class="news-letter-form">
+          <div class="form-group">
+            <input
+              type="email"
+              id="subscriberEmail"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+            <button type="submit" id="newsSubmitBtn " class="colored-btn">
+              Subscribe <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Bright Future Academy</p>
+      </div>
+    </footer>
+    <button id="scrollTopBtn" class="action-btn">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
