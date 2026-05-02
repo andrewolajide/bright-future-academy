@@ -4,18 +4,38 @@
 function initMobileMenu() {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".mobile-menu");
-  if (!hamburger || !menu) return;
+  const navbar = document.querySelector(".navbar"); // Select the navbar wrapper
+
+  // Safety check
+  if (!hamburger || !menu || !navbar) return;
 
   hamburger.addEventListener("click", () => {
+    // Toggle the animation classes
     hamburger.classList.toggle("active");
     menu.classList.toggle("active");
+
+    // Toggle the 'Ghost' state on the navbar
+    navbar.classList.toggle("menu-active");
   });
 
+  // Close menu when clicking outside
   document.addEventListener("click", (e) => {
     if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
       hamburger.classList.remove("active");
       menu.classList.remove("active");
+      navbar.classList.remove("menu-active"); // Reset the navbar too
     }
+  });
+
+  // Optional: Close menu when a link is clicked
+  // (Good for UX if the menu is long)
+  const menuLinks = menu.querySelectorAll("a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      menu.classList.remove("active");
+      navbar.classList.remove("menu-active");
+    });
   });
 }
 
@@ -177,8 +197,8 @@ function initProgramButtons() {
 const track = document.getElementById("scrollTrack");
 const container = document.getElementById("scrollContainer");
 
-// Only run the logic if the screen is 400px or smaller
-if (window.innerWidth <= 400) {
+// Check if BOTH elements exist AND the screen is 400px or smaller
+if (track && container && window.innerWidth <= 400) {
   // 1. Create and add the 'Loop Divider' dynamically
   const loopDivider = document.createElement("span");
   loopDivider.className = "divider";
@@ -189,7 +209,7 @@ if (window.innerWidth <= 400) {
   container.appendChild(clone);
 
   let scrollLeft = 0;
-  const speed = 0.6; // Slightly slower for readability
+  const speed = 0.6;
   let isPaused = false;
 
   // 3. Animation Logic
@@ -197,7 +217,6 @@ if (window.innerWidth <= 400) {
     if (!isPaused) {
       scrollLeft += speed;
 
-      // Reset when the first track finishes
       if (scrollLeft >= track.offsetWidth) {
         scrollLeft = 0;
       }
@@ -206,7 +225,6 @@ if (window.innerWidth <= 400) {
     requestAnimationFrame(animate);
   }
 
-  // Start
   animate();
 
   // Interaction: Pause on touch/hover
