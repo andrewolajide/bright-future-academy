@@ -170,3 +170,48 @@ function initProgramButtons() {
     showTab(primaryTab, primaryBtn); // default
   }
 }
+
+/* =============================
+    INFO BTN SCROLLING TEXT (Mobile Only)
+============================= */
+const track = document.getElementById("scrollTrack");
+const container = document.getElementById("scrollContainer");
+
+// Only run the logic if the screen is 400px or smaller
+if (window.innerWidth <= 400) {
+  // 1. Create and add the 'Loop Divider' dynamically
+  const loopDivider = document.createElement("span");
+  loopDivider.className = "divider";
+  track.appendChild(loopDivider);
+
+  // 2. Clone the track for the infinite loop
+  const clone = track.cloneNode(true);
+  container.appendChild(clone);
+
+  let scrollLeft = 0;
+  const speed = 0.6; // Slightly slower for readability
+  let isPaused = false;
+
+  // 3. Animation Logic
+  function animate() {
+    if (!isPaused) {
+      scrollLeft += speed;
+
+      // Reset when the first track finishes
+      if (scrollLeft >= track.offsetWidth) {
+        scrollLeft = 0;
+      }
+      container.scrollLeft = scrollLeft;
+    }
+    requestAnimationFrame(animate);
+  }
+
+  // Start
+  animate();
+
+  // Interaction: Pause on touch/hover
+  container.addEventListener("mouseenter", () => (isPaused = true));
+  container.addEventListener("mouseleave", () => (isPaused = false));
+  container.addEventListener("touchstart", () => (isPaused = true));
+  container.addEventListener("touchend", () => (isPaused = false));
+}
